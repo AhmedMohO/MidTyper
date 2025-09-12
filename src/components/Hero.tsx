@@ -3,6 +3,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
 	const { t, isRTL } = useLanguage();
@@ -71,9 +72,12 @@ const Hero = () => {
 								className="bg-white cursor-pointer text-primary hover:bg-white/90 shadow-strong text-lg px-8 py-4 h-auto transition-smooth group">
 								{t("hero.cta")}
 								<ArrowRight
-									className={`ml-2 h-5 w-5 transition-transform group-hover:${
-										isRTL ? "-translate-x-1" : "translate-x-1"
-									}`}
+									className={cn(
+										"h-5 w-5 transition-transform",
+										isRTL
+											? "group-hover:-translate-x-1"
+											: "group-hover:translate-x-1"
+									)}
 								/>
 							</Button>
 						</Link>
@@ -86,7 +90,7 @@ const Hero = () => {
 								className:
 									"border-white/30 cursor-pointer text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group",
 							})}>
-							<Play className="mr-2 h-5 w-5" />
+							<Play className="mr-2 h-5 w-5 transition-smooth group-hover:fill-white" />
 							{t("hero.ctaSecondary")}
 						</a>
 					</motion.div>
