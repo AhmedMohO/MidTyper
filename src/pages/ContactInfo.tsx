@@ -2,7 +2,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { toast } from "sonner";
-import { Copy, MessageCircle, ArrowLeft } from "lucide-react";
+import { Copy, ArrowLeft, Phone } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 
@@ -17,7 +17,7 @@ const ContactInfo = () => {
 	const contactMethods = [
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201018999090",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",
@@ -25,7 +25,7 @@ const ContactInfo = () => {
 		},
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201063157070",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",
@@ -33,7 +33,7 @@ const ContactInfo = () => {
 		},
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201120311258",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",

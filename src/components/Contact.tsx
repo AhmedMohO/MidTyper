@@ -3,14 +3,14 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/hooks/useLanguage";
 import { toast } from "sonner";
 import { motion } from "framer-motion";
-import { Copy, MessageCircle } from "lucide-react";
+import { Copy, Phone } from "lucide-react";
 const Contact = () => {
 	const { t } = useLanguage();
 
 	const contactMethods = [
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201018999090",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",
@@ -18,7 +18,7 @@ const Contact = () => {
 		},
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201063157070",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",
@@ -26,7 +26,7 @@ const Contact = () => {
 		},
 		{
 			key: "whatsapp",
-			icon: MessageCircle,
+			icon: Phone,
 			value: "+201120311258",
 			color: "text-green-600",
 			bgColor: "bg-green-50 hover:bg-green-100",

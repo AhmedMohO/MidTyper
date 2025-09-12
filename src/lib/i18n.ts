@@ -107,7 +107,7 @@ const resources = {
         title: "Contact Information",
         subtitle: "Choose your preferred way to reach us",
         copySuccess: "Copied to clipboard!",
-        whatsapp: "WhatsApp",
+        whatsapp: "WhatsApp & Phone",
         telegram: "Telegram",
         email: "Email",
       },

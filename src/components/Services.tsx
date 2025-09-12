@@ -42,13 +42,6 @@ const Services = () => {
 		},
 	];
 
-	const stats = [
-		{ label: t("services.stats.completed"), value: 500, suffix: "+" },
-		{ label: t("services.stats.clients"), value: 200, suffix: "+" },
-		{ label: t("services.stats.satisfaction"), value: 98, suffix: "%" },
-		{ label: t("services.stats.delivery"), value: 100, suffix: "%" },
-	];
-
 	return (
 		<section id="services" className="py-20 bg-muted/30">
 			<div className="container mx-auto px-4">
@@ -64,22 +57,6 @@ const Services = () => {
 					<p className="text-lg text-muted-foreground max-w-2xl mx-auto">
 						{t("services.subtitle")}
 					</p>
-				</motion.div>
-
-				<motion.div
-					className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
-					initial={{ opacity: 0, y: 30 }}
-					whileInView={{ opacity: 1, y: 0 }}
-					viewport={{ once: true }}
-					transition={{ duration: 0.6, delay: 0.2 }}>
-					{stats.map((stat, index) => (
-						<div key={index} className="text-center">
-							<div className="text-3xl font-bold text-primary mb-2">
-								<AnimatedCounter end={stat.value} suffix={stat.suffix} />
-							</div>
-							<p className="text-sm text-muted-foreground">{stat.label}</p>
-						</div>
-					))}
 				</motion.div>
 
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
