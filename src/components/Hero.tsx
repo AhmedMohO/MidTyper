@@ -14,7 +14,7 @@ const Hero = () => {
 			<div className="absolute inset-0 hero-gradient"></div>
 
 			<motion.div
-				className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-sm"
+				className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xs"
 				animate={{ y: [0, -10, 0] }}
 				transition={{ duration: 6, repeat: Infinity }}
 			/>
@@ -81,7 +81,7 @@ const Hero = () => {
 						<Button
 							variant="outline"
 							size="lg"
-							className="border-white/30 text-white bg-white/10 backdrop-blur-sm text-lg px-8 py-4 h-auto transition-smooth group"
+							className="border-white/30 text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group"
 							onClick={() =>
 								document
 									.getElementById("services")
