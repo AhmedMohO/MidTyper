@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/hooks/useLanguage";
 import { motion } from "framer-motion";
 
@@ -8,18 +8,15 @@ const PaymentMethods = () => {
 	const paymentMethods = [
 		{
 			key: "vodaCash",
-			imageUrl:
-				"https://play-lh.googleusercontent.com/Pv1p8v-KJq4Z_LLOjQjBZpK8DNJg4Zb5aNOQY7WfoiHR4Gfs165Z1TTNMThZ883Yfg",
+			imageUrl: "../assets/vodafonecash.png",
 		},
 		{
 			key: "insta",
-			imageUrl:
-				"https://cdn.prod.website-files.com/64c7f4cbdcc768b8275308ea/65a7a1ee0fb200379b7133e3_New%20Vodafone%20payment%20method.png",
+			imageUrl: "../assets/instapay.png",
 		},
 		{
 			key: "bank",
-			imageUrl:
-				"https://images.seeklogo.com/logo-png/45/1/saudi-national-bank-logo-png_seeklogo-451529.png",
+			imageUrl: "../assets/snb.png",
 		},
 	];
 
@@ -59,7 +56,12 @@ const PaymentMethods = () => {
 									<CardHeader>
 										<div className="mb-4 flex justify-center">
 											<div className="p-4 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-smooth">
-												<img src={method.imageUrl} alt={method.key} />
+												<img
+													src={method.imageUrl}
+													alt={method.key}
+													fetchPriority="low"
+													loading="lazy"
+												/>
 											</div>
 										</div>
 										<CardTitle className="text-lg group-hover:text-primary transition-smooth">
