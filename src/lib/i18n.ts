@@ -11,7 +11,7 @@ const resources = {
         services: "Services",
         about: "About",
         contact: "Contact",
-        getStarted: "Get Started"
+        getStarted: "Contact Us"
       },
       // Hero Section
       hero: {
@@ -139,7 +139,7 @@ const resources = {
         services: "الخدمات",
         about: "عن الشركة",
         contact: "اتصل بنا",
-        getStarted: "ابدأ الآن"
+        getStarted: "تواصل معنا"
       },
       // Hero Section
       hero: {

@@ -1,12 +1,11 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useLanguage } from "@/hooks/useLanguage";
-import { useToast } from "@/hooks/use-toast";
+import { toast } from "sonner";
 import { motion } from "framer-motion";
 import { Copy, MessageCircle } from "lucide-react";
 const Contact = () => {
 	const { t } = useLanguage();
-	const { toast } = useToast();
 
 	const contactMethods = [
 		{
@@ -37,8 +36,7 @@ const Contact = () => {
 
 	const copyToClipboard = (text: string, method: string) => {
 		navigator.clipboard.writeText(text).then(() => {
-			toast({
-				title: t("contactInfo.copySuccess"),
+			toast.success(t("contactInfo.copySuccess"), {
 				description: `${t(`contactInfo.${method}`)} ${text}`,
 			});
 		});
@@ -98,19 +96,23 @@ const Contact = () => {
 											<Button
 												variant="outline"
 												size="sm"
-												className="flex-1"
+												className="flex-1 cursor-pointer"
 												onClick={() =>
 													copyToClipboard(method.value, method.key)
 												}>
 												<Copy className="h-4 w-4 mr-2" />
 												Copy
 											</Button>
-											<Button
-												size="sm"
-												className="flex-1 shadow-soft hover:shadow-medium transition-smooth"
-												onClick={() => window.open(method.href, "_blank")}>
+											<a
+												href={method.href}
+												target="blank"
+												className={buttonVariants({
+													size: "sm",
+													className:
+														"flex-1 cursor-pointer shadow-soft hover:shadow-medium transition-smooth",
+												})}>
 												Open
-											</Button>
+											</a>
 										</div>
 									</CardContent>
 								</Card>

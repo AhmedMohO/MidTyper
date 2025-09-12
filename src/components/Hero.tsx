@@ -68,7 +68,7 @@ const Hero = () => {
 						<Link to="/contact-info">
 							<Button
 								size="lg"
-								className="bg-white text-primary hover:bg-white/90 shadow-strong text-lg px-8 py-4 h-auto transition-smooth group">
+								className="bg-white cursor-pointer text-primary hover:bg-white/90 shadow-strong text-lg px-8 py-4 h-auto transition-smooth group">
 								{t("hero.cta")}
 								<ArrowRight
 									className={`ml-2 h-5 w-5 transition-transform group-hover:${
@@ -81,7 +81,7 @@ const Hero = () => {
 						<Button
 							variant="outline"
 							size="lg"
-							className="border-white/30 text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group"
+							className="border-white/30 cursor-pointer text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group"
 							onClick={() =>
 								document
 									.getElementById("services")

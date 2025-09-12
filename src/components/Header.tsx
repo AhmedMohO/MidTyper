@@ -50,7 +50,7 @@ const Header = () => {
 							<button
 								key={item.key}
 								onClick={() => scrollToSection(item.href)}
-								className={`text-foreground hover:text-primary transition-smooth relative group ${
+								className={`text-foreground cursor-pointer hover:text-primary transition-smooth relative group ${
 									activeSection === item.key.replace("#", "")
 										? "text-primary"
 										: ""
@@ -71,7 +71,7 @@ const Header = () => {
 						<DarkModeToggle />
 						<LanguageSwitcher />
 						<Link to="/contact-info">
-							<Button className="shadow-soft hover:shadow-medium transition-smooth">
+							<Button className="shadow-soft cursor-pointer hover:shadow-medium transition-smooth">
 								{t("nav.getStarted")}
 							</Button>
 						</Link>
@@ -81,6 +81,7 @@ const Header = () => {
 						<DarkModeToggle />
 						<LanguageSwitcher />
 						<Button
+							className="cursor-pointer"
 							variant="ghost"
 							size="icon"
 							onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -104,7 +105,7 @@ const Header = () => {
 								<button
 									key={item.key}
 									onClick={() => scrollToSection(item.href)}
-									className={`text-foreground hover:text-primary transition-smooth py-2 text-left ${
+									className={`text-foreground cursor-pointer hover:text-primary transition-smooth py-2 text-left ${
 										activeSection === item.key.replace("#", "")
 											? "text-primary"
 											: ""
@@ -113,7 +114,7 @@ const Header = () => {
 								</button>
 							))}
 							<Link to="/contact-info">
-								<Button className="mt-4 shadow-soft w-full">
+								<Button className="mt-4 cursor-pointer shadow-soft w-full">
 									{t("nav.getStarted")}
 								</Button>
 							</Link>

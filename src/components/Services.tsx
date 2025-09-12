@@ -93,7 +93,7 @@ const Services = () => {
 								viewport={{ once: true }}
 								transition={{ duration: 0.6, delay: index * 0.1 }}
 								whileHover={{ y: -5 }}>
-								<Card className="group hover:shadow-medium transition-smooth border-0 shadow-soft card-gradient h-full flex flex-col justify-between cursor-pointer">
+								<Card className="group hover:shadow-medium transition-smooth border-0 shadow-soft card-gradient h-full flex flex-col justify-between">
 									<CardHeader className="text-center">
 										<div className="mb-4 flex justify-center">
 											<motion.div
@@ -119,7 +119,7 @@ const Services = () => {
 												`services.${service.key}.title`
 											)}&price=${service.price}`}
 											className="block">
-											<Button className="w-full shadow-soft hover:shadow-medium transition-smooth">
+											<Button className="w-full cursor-pointer shadow-soft hover:shadow-medium transition-smooth">
 												{t("services.orderNow")}
 											</Button>
 										</Link>
