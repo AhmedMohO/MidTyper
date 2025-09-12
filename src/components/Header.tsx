@@ -23,7 +23,9 @@ const Header = () => {
 	const scrollToSection = (href: string) => {
 		const element = document.querySelector(href);
 		if (element) {
-			element.scrollIntoView({ behavior: "smooth" });
+			requestAnimationFrame(() => {
+				element.scrollIntoView({ behavior: "smooth" });
+			});
 		}
 		setIsMenuOpen(false);
 	};

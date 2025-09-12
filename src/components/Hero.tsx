@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -78,18 +78,17 @@ const Hero = () => {
 							</Button>
 						</Link>
 
-						<Button
-							variant="outline"
-							size="lg"
-							className="border-white/30 cursor-pointer text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group"
-							onClick={() =>
-								document
-									.getElementById("services")
-									?.scrollIntoView({ behavior: "smooth" })
-							}>
+						<a
+							href="#services"
+							className={buttonVariants({
+								variant: "outline",
+								size: "lg",
+								className:
+									"border-white/30 cursor-pointer text-white bg-white/10 backdrop-blur-xs text-lg px-8 py-4 h-auto transition-smooth group",
+							})}>
 							<Play className="mr-2 h-5 w-5" />
 							{t("hero.ctaSecondary")}
-						</Button>
+						</a>
 					</motion.div>
 				</div>
 			</div>

@@ -44,7 +44,6 @@ export default defineConfig({
             return "icons";
           }
 
-          // fallback vendor chunk per package
           const match = id.match(/node_modules\\\\([^\\\\/]+)/) || id.match(/node_modules\/([^\\/]+)/);
           if (match && match[1]) return `vendor-${match[1]}`;
         },
