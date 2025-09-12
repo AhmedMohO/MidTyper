@@ -8,15 +8,15 @@ const PaymentMethods = () => {
 	const paymentMethods = [
 		{
 			key: "vodaCash",
-			imageUrl: "../assets/vodafonecash.png",
+			imageUrl: "./vodafonecash.png",
 		},
 		{
 			key: "insta",
-			imageUrl: "../assets/instapay.png",
+			imageUrl: "./instapay.png",
 		},
 		{
 			key: "bank",
-			imageUrl: "../assets/snb.png",
+			imageUrl: "./snb.png",
 		},
 	];
 
@@ -59,7 +59,6 @@ const PaymentMethods = () => {
 												<img
 													src={method.imageUrl}
 													alt={method.key}
-													fetchPriority="low"
 													loading="lazy"
 												/>
 											</div>

@@ -6,6 +6,7 @@ export const useActiveSection = () => {
 		new Map()
 	);
 	const lastScrollY = useRef(0);
+	const cacheTimeoutRef = useRef<NodeJS.Timeout>();
 
 	const updateSectionCache = useCallback(() => {
 		const sections = ["home", "services", "about", "contact"];
@@ -33,6 +34,11 @@ export const useActiveSection = () => {
 
 		lastScrollY.current = scrollPosition;
 
+		// Check if cache is empty or stale, refresh if needed
+		if (sectionCache.current.size === 0) {
+			updateSectionCache();
+		}
+
 		// Use cached values to avoid forced reflow
 		for (const [section, bounds] of sectionCache.current) {
 			if (scrollPosition >= bounds.top && scrollPosition < bounds.bottom) {
@@ -40,16 +46,30 @@ export const useActiveSection = () => {
 				return;
 			}
 		}
-	}, []);
+	}, [updateSectionCache]);
 
 	useEffect(() => {
-		// Initial cache update
-		updateSectionCache();
+		// Initial cache update with delay to ensure DOM is ready
+		const initialUpdate = () => {
+			updateSectionCache();
+			handleScroll();
+		};
+
+		// Use setTimeout to ensure DOM is fully loaded
+		const timeoutId = setTimeout(initialUpdate, 100);
 
 		// Update cache on resize
 		const handleResize = () => {
-			updateSectionCache();
-			handleScroll();
+			// Clear any pending cache updates
+			if (cacheTimeoutRef.current) {
+				clearTimeout(cacheTimeoutRef.current);
+			}
+
+			// Debounce cache updates
+			cacheTimeoutRef.current = setTimeout(() => {
+				updateSectionCache();
+				handleScroll();
+			}, 150);
 		};
 
 		window.addEventListener("scroll", handleScroll, { passive: true });
@@ -58,6 +78,10 @@ export const useActiveSection = () => {
 		return () => {
 			window.removeEventListener("scroll", handleScroll);
 			window.removeEventListener("resize", handleResize);
+			clearTimeout(timeoutId);
+			if (cacheTimeoutRef.current) {
+				clearTimeout(cacheTimeoutRef.current);
+			}
 		};
 	}, [handleScroll, updateSectionCache]);
 
