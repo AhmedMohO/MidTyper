@@ -1,8 +1,8 @@
+import { Suspense, lazy } from "react";
+import { LoadingSkeleton } from "@/components/ui/loading";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-import { Suspense, lazy } from "react";
-import { LoadingSkeleton } from "@/components/ui/loading";
 
 const About = lazy(() => import("@/components/About"));
 const Services = lazy(() => import("@/components/Services"));

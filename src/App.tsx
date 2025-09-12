@@ -1,16 +1,13 @@
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ThemeProvider } from "next-themes";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "@/components/ui/loading";
 import { RootLayout } from "@/components/RootLayout";
+import Index from "./pages/Index";
 
-const Index = lazy(() => import("./pages/Index"));
 const ContactInfo = lazy(() => import("./pages/ContactInfo"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const ErrorPage = lazy(() => import("./pages/ErrorPage"));
-
-const queryClient = new QueryClient();
 
 const router = createBrowserRouter([
 	{
@@ -24,11 +21,7 @@ const router = createBrowserRouter([
 		children: [
 			{
 				index: true,
-				element: (
-					<Suspense fallback={<LoadingSpinner />}>
-						<Index />
-					</Suspense>
-				),
+				element: <Index />,
 			},
 			{
 				path: "contact-info",
@@ -51,11 +44,9 @@ const router = createBrowserRouter([
 ]);
 
 const App = () => (
-	<QueryClientProvider client={queryClient}>
-		<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-			<RouterProvider router={router} />
-		</ThemeProvider>
-	</QueryClientProvider>
+	<ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+		<RouterProvider router={router} />
+	</ThemeProvider>
 );
 
 export default App;
