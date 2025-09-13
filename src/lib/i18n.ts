@@ -268,13 +268,19 @@ i18n
     resources,
     fallbackLng: 'en',
     debug: false,
+    // Optimize for faster initialization
+    initImmediate: true,
+    load: 'languageOnly',
     detection: {
-      order: ['localStorage', 'navigator', 'htmlTag'],
+      order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
     },
     interpolation: {
       escapeValue: false,
     },
+    // Reduce bundle size by disabling unused features
+    saveMissing: false,
+    updateMissing: false,
   });
 
 export default i18n;

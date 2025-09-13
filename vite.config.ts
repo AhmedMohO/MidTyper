@@ -32,6 +32,10 @@ export default defineConfig({
           ],
           'charts': ['recharts', 'react-resizable-panels', 'react-day-picker'],
         },
+        // Optimize chunk loading
+        chunkFileNames: 'assets/[name]-[hash].js',
+        entryFileNames: 'assets/[name]-[hash].js',
+        assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
   },
