@@ -4,6 +4,7 @@ import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "@/components/ui/loading";
 import { RootLayout } from "@/components/RootLayout";
 import Index from "./pages/Index";
+import "./lib/i18n";
 
 const ContactInfo = lazy(() => import("./pages/ContactInfo"));
 const NotFound = lazy(() => import("./pages/NotFound"));

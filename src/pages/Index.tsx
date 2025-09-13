@@ -1,13 +1,10 @@
-import { Suspense, lazy } from "react";
-import { LoadingSkeleton } from "@/components/ui/loading";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Footer from "@/components/Footer";
-
-const About = lazy(() => import("@/components/About"));
-const Services = lazy(() => import("@/components/Services"));
-const Contact = lazy(() => import("@/components/Contact"));
-const PaymentMethods = lazy(() => import("@/components/PaymentMethods"));
+import About from "@/components/About";
+import Services from "@/components/Services";
+import Contact from "@/components/Contact";
+import PaymentMethods from "@/components/PaymentMethods";
 
 const Index = () => {
 	return (
@@ -15,12 +12,10 @@ const Index = () => {
 			<Header />
 			<main>
 				<Hero />
-				<Suspense fallback={<LoadingSkeleton />}>
-					<Services />
-					<About />
-					<Contact />
-					<PaymentMethods />
-				</Suspense>
+				<Services />
+				<About />
+				<Contact />
+				<PaymentMethods />
 			</main>
 			<Footer />
 		</div>

@@ -2,7 +2,6 @@ import { Button, buttonVariants } from "@/components/ui/button";
 import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const Hero = () => {
@@ -20,11 +19,7 @@ const Hero = () => {
 			<div className="absolute top-1/3 right-1/3 w-2 h-2 bg-white/30 rounded-full animate-pulse" />
 
 			<div className="container mx-auto px-4 relative z-10">
-				<motion.div
-					initial={{ opacity: 0, y: 30 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ duration: 0.4 }}
-					className="max-w-4xl mx-auto text-center text-white">
+				<div className="max-w-4xl mx-auto text-center text-white">
 					<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
 						{t("hero.title")}
 					</h1>
@@ -66,7 +61,7 @@ const Hero = () => {
 							{t("hero.ctaSecondary")}
 						</a>
 					</div>
-				</motion.div>
+				</div>
 			</div>
 		</section>
 	);
