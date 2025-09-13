@@ -27,13 +27,10 @@ export default defineConfig({
             '@radix-ui/react-dialog',
             '@radix-ui/react-dropdown-menu',
             'class-variance-authority',
-            'tailwind-merge',
-            'sonner',
             'cmdk',
             'embla-carousel-react'
           ],
           'charts': ['recharts', 'react-resizable-panels', 'react-day-picker'],
-          'icons': ['lucide-react'],
         },
       },
     },

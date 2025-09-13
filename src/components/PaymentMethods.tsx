@@ -8,15 +8,15 @@ const PaymentMethods = () => {
 	const paymentMethods = [
 		{
 			key: "vodaCash",
-			imageUrl: "./vodafonecash.png",
+			imageUrl: "./vodafonecash.webp",
 		},
 		{
 			key: "insta",
-			imageUrl: "./instapay.png",
+			imageUrl: "./instapay.webp",
 		},
 		{
 			key: "bank",
-			imageUrl: "./snb.png",
+			imageUrl: "./snb.webp",
 		},
 	];
 

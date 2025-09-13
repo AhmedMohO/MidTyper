@@ -17,11 +17,7 @@ const Index = () => {
 				<Hero />
 				<Suspense fallback={<LoadingSkeleton />}>
 					<Services />
-				</Suspense>
-				<Suspense fallback={<LoadingSkeleton />}>
 					<About />
-				</Suspense>
-				<Suspense fallback={<LoadingSkeleton />}>
 					<Contact />
 				</Suspense>
 				<Suspense fallback={<LoadingSkeleton />}>
