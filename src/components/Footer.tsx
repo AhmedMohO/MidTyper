@@ -86,7 +86,12 @@ const Footer = () => {
 					<p className="text-muted-foreground text-sm">
 						{t("footer.copyright")}
 					</p>
-					<p className="text-muted-foreground text-sm">{t("footer.creator")}</p>
+					<a
+						href="https://ahmed-port-folio.vercel.app/"
+						target="_blank"
+						className="text-muted-foreground text-sm text-primary underline">
+						{t("footer.creator")}
+					</a>
 				</div>
 			</div>
 		</footer>

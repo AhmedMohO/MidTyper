@@ -127,7 +127,7 @@ const resources = {
           whatsapp: "+201120311258",
         },
         copyright: "©2025 MidTyper. All rights reserved.",
-        creator: " Created With Love By AhmedMoh"
+        creator: " Created With ❤ By AhmedMoh"
       }
     }
   },
@@ -235,7 +235,7 @@ const resources = {
         title: "معلومات الاتصال",
         subtitle: "اختر الطريقة المفضلة للتواصل معنا",
         copySuccess: "تم النسخ!",
-        whatsapp: "واتساب",
+        whatsapp: "الهاتف و الواتساب",
         telegram: "تليجرام",
         email: "البريد الإلكتروني",
       },
@@ -255,7 +255,7 @@ const resources = {
           whatsapp: "+201120311258",
         },
         copyright: "© 2025 ميدتايبر. جميع الحقوق محفوظة.",
-        creator: "تم إنشاء هذا الموقع بأخلاص من قبل احمد محمد"
+        creator: "تم إنشاء هذا الموقع بأخلاص من قبل AhmedMoh ❤"
       }
     }
   }
