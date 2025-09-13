@@ -33,7 +33,7 @@ const PaymentMethods = () => {
 				</div>
 
 				<motion.div
-					className="grid grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto"
+					className="grid grid-cols-2 md:grid-cols-3 gap-8 max-w-4xl mx-auto"
 					variants={{
 						hidden: {},
 						show: { transition: { staggerChildren: 0.1 } },
