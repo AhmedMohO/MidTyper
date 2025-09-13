@@ -19,8 +19,6 @@ const Index = () => {
 					<Services />
 					<About />
 					<Contact />
-				</Suspense>
-				<Suspense fallback={<LoadingSkeleton />}>
 					<PaymentMethods />
 				</Suspense>
 			</main>
