@@ -3,6 +3,7 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
 
 const Hero = () => {
 	const { t, isRTL } = useLanguage();
@@ -19,20 +20,36 @@ const Hero = () => {
 			<div className="absolute top-1/3 right-1/3 w-2 h-2 bg-white/30 rounded-full animate-pulse" />
 
 			<div className="container mx-auto px-4 relative z-10">
-				<div className="max-w-4xl mx-auto text-center text-white">
-					<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+				<div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-28 duration-600 text-white">
+					<motion.h1
+						className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8 }}>
 						{t("hero.title")}
-					</h1>
+					</motion.h1>
 
-					<p className="text-xl md:text-2xl mb-4 text-white/90">
+					<motion.p
+						className="text-xl md:text-2xl mb-4 text-white/90"
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.2 }}>
 						{t("hero.subtitle")}
-					</p>
+					</motion.p>
 
-					<p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto leading-relaxed">
+					<motion.p
+						className="text-lg mb-8 text-white/80 max-w-2xl mx-auto leading-relaxed"
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.4 }}>
 						{t("hero.description")}
-					</p>
+					</motion.p>
 
-					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+					<motion.div
+						className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ duration: 0.8, delay: 0.6 }}>
 						<Link to="/contact-info">
 							<Button
 								size="lg"
@@ -60,7 +77,7 @@ const Hero = () => {
 							<Play className="mr-2 h-5 w-5 transition-smooth group-hover:fill-white" />
 							{t("hero.ctaSecondary")}
 						</a>
-					</div>
+					</motion.div>
 				</div>
 			</div>
 		</section>
