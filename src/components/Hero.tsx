@@ -3,7 +3,6 @@ import { useLanguage } from "@/hooks/useLanguage";
 import { ArrowRight, Play } from "lucide-react";
 import { Link } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
 
 const Hero = () => {
 	const { t, isRTL } = useLanguage();
@@ -21,35 +20,19 @@ const Hero = () => {
 
 			<div className="container mx-auto px-4 relative z-10">
 				<div className="max-w-4xl mx-auto text-center animate-in fade-in slide-in-from-bottom-28 duration-600 text-white">
-					<motion.h1
-						className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6"
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8 }}>
+					<h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
 						{t("hero.title")}
-					</motion.h1>
+					</h1>
 
-					<motion.p
-						className="text-xl md:text-2xl mb-4 text-white/90"
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.2 }}>
+					<p className="text-xl md:text-2xl mb-4 text-white/90">
 						{t("hero.subtitle")}
-					</motion.p>
+					</p>
 
-					<motion.p
-						className="text-lg mb-8 text-white/80 max-w-2xl mx-auto leading-relaxed"
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.4 }}>
+					<p className="text-lg mb-8 text-white/80 max-w-2xl mx-auto leading-relaxed">
 						{t("hero.description")}
-					</motion.p>
+					</p>
 
-					<motion.div
-						className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-						initial={{ opacity: 0, y: 30 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ duration: 0.8, delay: 0.6 }}>
+					<div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
 						<Link to="/contact-info">
 							<Button
 								size="lg"
@@ -77,7 +60,7 @@ const Hero = () => {
 							<Play className="mr-2 h-5 w-5 transition-smooth group-hover:fill-white" />
 							{t("hero.ctaSecondary")}
 						</a>
-					</motion.div>
+					</div>
 				</div>
 			</div>
 		</section>
