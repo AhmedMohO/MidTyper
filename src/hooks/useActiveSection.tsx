@@ -49,7 +49,7 @@ export const useActiveSection = () => {
 	}, [updateSectionCache]);
 
 	useEffect(() => {
-		if (window.innerWidth < 768) return;
+		if (window.matchMedia("(max-width: 767px)").matches) return;
 		// Initial cache update with delay to ensure DOM is ready
 		const initialUpdate = () => {
 			updateSectionCache();

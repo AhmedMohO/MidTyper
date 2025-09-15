@@ -11,9 +11,13 @@ export default defineConfig({
     },
   },
   build: {
+    target: "es2018",
     cssCodeSplit: true,
     sourcemap: false,
     chunkSizeWarningLimit: 250,
+    modulePreload: {
+      polyfill: false,
+    },
     rollupOptions: {
       output: {
         manualChunks: {
@@ -38,5 +42,10 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
+    minify: "esbuild",
+    terserOptions: undefined,
+  },
+  esbuild: {
+    drop: ["console", "debugger"],
   },
 });

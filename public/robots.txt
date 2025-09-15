@@ -12,3 +12,6 @@ Allow: /
 
 User-agent: *
 Allow: /
+
+# Cache-friendly hint
+# Served with long max-age via framework config

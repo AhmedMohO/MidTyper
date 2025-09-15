@@ -1,10 +1,13 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import Footer from "@/components/Footer";
-import About from "@/components/About";
-import Services from "@/components/Services";
-import Contact from "@/components/Contact";
-import PaymentMethods from "@/components/PaymentMethods";
+import { lazy, Suspense } from "react";
+import { LoadingSpinner } from "@/components/ui/loading";
+
+const Services = lazy(() => import("@/components/Services"));
+const About = lazy(() => import("@/components/About"));
+const Contact = lazy(() => import("@/components/Contact"));
+const PaymentMethods = lazy(() => import("@/components/PaymentMethods"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
 	return (
@@ -12,12 +15,22 @@ const Index = () => {
 			<Header />
 			<main>
 				<Hero />
-				<Services />
-				<About />
-				<Contact />
-				<PaymentMethods />
+				<Suspense fallback={<LoadingSpinner />}>
+					<Services />
+				</Suspense>
+				<Suspense fallback={<LoadingSpinner />}>
+					<About />
+				</Suspense>
+				<Suspense fallback={<LoadingSpinner />}>
+					<Contact />
+				</Suspense>
+				<Suspense fallback={<LoadingSpinner />}>
+					<PaymentMethods />
+				</Suspense>
 			</main>
-			<Footer />
+			<Suspense fallback={<div />}>
+				<Footer />
+			</Suspense>
 		</div>
 	);
 };
