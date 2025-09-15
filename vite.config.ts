@@ -14,7 +14,7 @@ export default defineConfig({
     target: "es2018",
     cssCodeSplit: true,
     sourcemap: false,
-    chunkSizeWarningLimit: 250,
+    chunkSizeWarningLimit: 300,
     modulePreload: {
       polyfill: false,
     },
@@ -22,19 +22,6 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-core': ['react', 'react-dom', 'react-router-dom'],
-          'motion': ['framer-motion'],
-          'i18n': ['i18next', 'react-i18next', 'i18next-browser-languagedetector'],
-          'ui': [
-            '@radix-ui/react-accordion',
-            '@radix-ui/react-alert-dialog',
-            '@radix-ui/react-avatar',
-            '@radix-ui/react-dialog',
-            '@radix-ui/react-dropdown-menu',
-            'class-variance-authority',
-            'cmdk',
-            'embla-carousel-react'
-          ],
-          'charts': ['recharts', 'react-resizable-panels', 'react-day-picker'],
         },
         // Optimize chunk loading
         chunkFileNames: 'assets/[name]-[hash].js',
