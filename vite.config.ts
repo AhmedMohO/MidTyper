@@ -11,17 +11,14 @@ export default defineConfig({
     },
   },
   build: {
-    target: "es2018",
     cssCodeSplit: true,
     sourcemap: false,
-    chunkSizeWarningLimit: 300,
-    modulePreload: {
-      polyfill: false,
-    },
+    chunkSizeWarningLimit: 250,
     rollupOptions: {
       output: {
         manualChunks: {
           'react-core': ['react', 'react-dom', 'react-router-dom'],
+          'motion': ['framer-motion'],
         },
         // Optimize chunk loading
         chunkFileNames: 'assets/[name]-[hash].js',
@@ -29,10 +26,5 @@ export default defineConfig({
         assetFileNames: 'assets/[name]-[hash].[ext]',
       },
     },
-    minify: "esbuild",
-    terserOptions: undefined,
-  },
-  esbuild: {
-    drop: ["console", "debugger"],
   },
 });
