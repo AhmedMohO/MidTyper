@@ -2,12 +2,12 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import { lazy, Suspense } from "react";
 import { LoadingSpinner } from "@/components/ui/loading";
+import Footer from "@/components/Footer";
 
 const Services = lazy(() => import("@/components/Services"));
 const About = lazy(() => import("@/components/About"));
 const Contact = lazy(() => import("@/components/Contact"));
 const PaymentMethods = lazy(() => import("@/components/PaymentMethods"));
-const Footer = lazy(() => import("@/components/Footer"));
 
 const Index = () => {
 	return (
@@ -28,9 +28,7 @@ const Index = () => {
 					<PaymentMethods />
 				</Suspense>
 			</main>
-			<Suspense fallback={<div />}>
-				<Footer />
-			</Suspense>
+			<Footer />
 		</div>
 	);
 };
