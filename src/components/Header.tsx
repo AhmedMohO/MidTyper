@@ -43,7 +43,7 @@ const Header = () => {
 							<BookOpen className="h-6 w-6 text-primary-foreground" />
 						</div>
 						<span className="text-xl font-bold text-gradient">
-							{isRTL ? "ميدتايبر" : "MidTyper"}
+							{isRTL ? "ميدتايبر" : "MedTyper"}
 						</span>
 					</Link>
 

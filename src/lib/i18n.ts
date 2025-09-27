@@ -123,10 +123,10 @@ const resources = {
         },
         contact: {
           title: "Contact Info",
-          email: "info@MidTyper.com",
+          email: "info@MedTyper.com",
           whatsapp: "+201120311258",
         },
-        copyright: "©2025 MidTyper. All rights reserved.",
+        copyright: "©2025 MedTyper. All rights reserved.",
         creator: " Created With ❤ By AhmedMoh"
       }
     }
@@ -251,7 +251,7 @@ const resources = {
         },
         contact: {
           title: "معلومات الاتصال",
-          email: "info@MidTyper.com",
+          email: "info@MedTyper.com",
           whatsapp: "+201120311258",
         },
         copyright: "© 2025 ميدتايبر. جميع الحقوق محفوظة.",

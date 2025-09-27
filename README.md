@@ -1,6 +1,6 @@
-# MidTyper
+# MedTyper
 
-A modern, responsive web application built with React, TypeScript, and Tailwind CSS. MidTyper provides a sleek user interface with internationalization support, dark mode, and smooth animations.
+A modern, responsive web application built with React, TypeScript, and Tailwind CSS. MedTyper provides a sleek user interface with internationalization support, dark mode, and smooth animations.
 
 ## 🚀 Features
 
@@ -30,8 +30,8 @@ A modern, responsive web application built with React, TypeScript, and Tailwind 
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/MidTyper.git
-   cd MidTyper
+   git clone https://github.com/YOUR_USERNAME/MedTyper.git
+   cd MedTyper
    ```
 
 2. **Install dependencies**
